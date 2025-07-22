@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0 auto;
+  box-sizing: border-box;
+}
+
+.navbar {
+  height: 65px;
+  background-color: orange;
+  width: 100%;
+}
+
+.main {
+  display: flex;
+}
+
+.main div:first-child {
+  width: 20%;
+  height: calc(100vh - 65px);
+  background-color: brown;
+}
+.main div:last-child{
+  width: 80%;
+  background-color: beige;
+  height: calc(100vh - 65px);
+}
