@@ -50,7 +50,7 @@ function RegisterPage() {
     const register = async () => {
         try{
             const response = await axios.post('http://localhost:3500/register', data);
-            console.log(response);
+            alert(response.data.message);
         }catch(e){
             console.log(e);
         };

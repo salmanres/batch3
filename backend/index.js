@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const port = 3500
 const cors = require('cors');
+const userdata = require('./schema/UserSchema');
+
 require('./database/mongoose');
 
 app.use(cors());
@@ -31,17 +33,18 @@ app.get('/userdata', (req, res) => {
             }
         ];
 
-        res.status(255).json({message: "data fetched successsfully", data});
+        res.status(255).json({ message: "data fetched successsfully", data });
 
     } catch (e) {
         console.log(e);
     };
 });
 
-app.post('/register', (req, res)=>{
-    try{
-        console.log(req.body);
-    }catch(e){
+app.post('/register', async (req, res) => {
+    try {
+        await userdata.insertOne(req.body);
+        res.status(200).json({message: "user registration successgful"});
+    } catch (e) {
         console.log(e);
     };
 });
