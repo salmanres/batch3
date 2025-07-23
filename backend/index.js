@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const port = 3500
 const cors = require('cors');
+require('./database/mongoose');
 
 app.use(cors());
 app.use(express.json());
