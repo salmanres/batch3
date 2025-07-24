@@ -16,6 +16,9 @@ function Navbar() {
                 <a className="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li className="nav-item">
+                <Link to="/login" className='btn btn-warning mx-5'>login</Link>
+              </li>
+              <li className="nav-item">
                 <Link to="/register" className='mx-5'>Register Page</Link>
               </li>
               <li className="nav-item">
