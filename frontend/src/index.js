@@ -18,6 +18,7 @@ import store from './dashboard/redux/Store';
 import ReduxPage from './dashboard/ReduxPage';
 import react from 'react';
 import LoginPage from './dashboard/auth/LoginPage';
+import UserDataPage from './dashboard/UserDataPage';
 // import BlogDetailsPage from './dashboard/BlogDetailsPage';
 
 const BlogDetailsPage = lazy(() => import('./dashboard/BlogDetailsPage'));
@@ -35,6 +36,7 @@ root.render(
             <Route path='/mapping' element={< DataPage />} />
             <Route path='/fetch-api' element={< ApiPage />} />
             <Route path='/login' element={< LoginPage />} />
+            <Route path='/userdata' element={< UserDataPage />} />
 
             <Route path='/redux' element={< ReduxPage />} />
             <Route path='/blogdetails/:title' element={

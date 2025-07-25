@@ -16,19 +16,22 @@ function Navbar() {
                 <a className="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li className="nav-item">
-                <Link to="/login" className='btn btn-warning mx-5'>login</Link>
+                <Link to="/login" className='btn btn-warning mx-2'>login</Link>
               </li>
               <li className="nav-item">
-                <Link to="/register" className='mx-5'>Register Page</Link>
+                <Link to="/userdata" className='btn btn-warning mx-2'>userdata</Link>
               </li>
               <li className="nav-item">
-                <Link to="/mapping" className='mx-5'>Data Mapping</Link>
+                <Link to="/register" className='mx-2'>Register Page</Link>
               </li>
               <li className="nav-item">
-                <Link to="/redux" className='mx-5'>REDUX</Link>
+                <Link to="/mapping" className='mx-2'>Data Mapping</Link>
               </li>
               <li className="nav-item">
-                <Link to="/fetch-api" className='mx-5'>FETCH API METHOD</Link>
+                <Link to="/redux" className='mx-2'>REDUX</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/fetch-api" className='mx-2'>FETCH API METHOD</Link>
               </li>
               <li className="nav-item">
                 <a className="nav-link disabled" aria-disabled="true">Disabled</a>

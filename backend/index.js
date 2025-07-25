@@ -42,6 +42,7 @@ app.get('/userdata', (req, res) => {
 
 app.post('/register', async (req, res) => {
     try {
+        console.log(req.body);
         await userdata.insertOne(req.body);
         res.status(200).json({ message: "user registration successgful" });
     } catch (e) {
@@ -68,6 +69,27 @@ app.post('/login', async (req, res) => {
         }
     } catch (e) {
         console.log(e);
+    };
+});
+
+// user data api
+
+app.get('/alluserdata', async(req, res)=>{
+    try{
+        const data = await userdata.find();
+        res.status(200).json(data);
+    }catch(err){
+        console.log(err);
+    };
+});
+
+app.delete('/deleteuser/:id', async(req, res)=>{
+    try{
+        const {id} = req.params;
+        await userdata.findByIdAndDelete(id);
+        res.status(200).json({message:"user info deleted"});
+    }catch(err){
+        console.log(err);
     };
 });
 
